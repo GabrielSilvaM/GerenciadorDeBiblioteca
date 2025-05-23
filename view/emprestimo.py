@@ -1,0 +1,3 @@
+def menuEmprestimos():
+    #Arrumar
+    pass
