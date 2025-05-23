@@ -18,4 +18,4 @@ class Usuario(Base):
         'polymorphic_on': tipo
     }
 
-    emprestimos = relationship("Emprestimo", back_populates="usuario")
+    emprestimo = relationship("Emprestimo", back_populates="usuario",passive_deletes=True)

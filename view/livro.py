@@ -16,21 +16,23 @@ def menuLivros():
                 print("A opção deve ser um número!")
 
         if opcao == 1:
-            menuCadastrarLivro()
+            menuCadastrarLivros()
             
         elif opcao == 2:
-            menuRemoverLivro()
+            menuRemoverLivros()
             
         elif opcao == 3:
-            consultarLivros()
+            menuConsultarLivros()
             
         elif opcao == 4:
+            os.system('cls')
             break
 
         else:
             print("Opção inválida")
 
-def menuCadastrarLivro():
+def menuCadastrarLivros():
+    os.system('cls')
     print("--- CADASTRAR LIVRO ---")
     titulo = input("Título: ")
     autor = input("Autor: ")
@@ -50,7 +52,8 @@ def menuCadastrarLivro():
 
 
 
-def menuRemoverLivro():
+def menuRemoverLivros():
+    os.system('cls')
     print("--- REMOVER LIVRO ---")
     print("Insira o ISBN do livro que deseja remover ou 1 para voltar")
     isbn = input()
@@ -60,4 +63,30 @@ def menuRemoverLivro():
         return
     
     removerLivros(isbn)
-  
+
+
+def menuConsultarLivros():
+    os.system('cls')
+    print("--- CONSULTAR LIVROS ---")
+    print("1. Livros Disponíveis")
+    print("2. Filtrar por Autor")
+    print("3. Filtrar por gênero")
+    print("4. Voltar")
+
+    while True:
+        try:
+            opcao = int(input())
+            if opcao >= 1 and opcao <= 4:
+                break
+        except ValueError:
+            print("Opção inválida")
+    
+    if opcao == 1:
+        consultarLivros()
+    elif opcao == 2:
+        autor = input("Autor: ")
+        consultarLivros(autor=autor)
+    elif opcao == 3:
+        genero = input("Gênero: ")
+        consultarLivros(genero=genero)
+    

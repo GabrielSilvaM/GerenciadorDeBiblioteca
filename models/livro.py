@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, Integer, Boolean
+from sqlalchemy.orm import relationship
 from .base import Base
 
 class Livro(Base):
@@ -11,3 +12,5 @@ class Livro(Base):
     anoPublicacao = Column(Integer, nullable=False)
     genero = Column(String, nullable=False)
     disponivel = Column(Boolean, default=True)
+
+    emprestimo = relationship("Emprestimo", back_populates="livro", passive_deletes=True)

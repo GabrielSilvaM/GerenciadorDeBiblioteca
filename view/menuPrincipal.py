@@ -32,13 +32,3 @@ def menuPrincipal():
             os.system('cls')
             print("Opção inválida")
             menuPrincipal()
-
-
-
-
-
-def menuEmprestimos():
-    pass
-
-
-
