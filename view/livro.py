@@ -69,7 +69,7 @@ def menuConsultarLivros():
     os.system('cls')
     print("--- CONSULTAR LIVROS ---")
     print("1. Livros Disponíveis")
-    print("2. Filtrar por Autor")
+    print("2. Filtrar por autor")
     print("3. Filtrar por gênero")
     print("4. Voltar")
 

@@ -6,7 +6,7 @@ def menuEmprestimos():
         print("--- GERENCIAMENTO DE EMPRÉSTIMOS ---")
         print("1. Registrar Empréstimo")
         print("2. Registrar Devolução")
-        print("3. Consultar Empréstimos")
+        print("3. Consultar Empréstimos Ativos")
         print("4. Voltar")
         #Laço para validar entrada de números
         while True:
@@ -35,6 +35,7 @@ def menuEmprestimos():
 
 
 def menuRegistrarEmprestimos():
+    os.system('cls')
     print("--- REGISTRAR EMPRÉSTIMO ---")
     isbn = input("ISBN: ")
     #Laço para validar entrada de números
@@ -52,6 +53,7 @@ def menuRegistrarEmprestimos():
 
 
 def menuRegistrarDevolucao():
+    os.system('cls')
     print("--- REGISTRAR DEVOLUÇÃO ---")
     isbn = input("ISBN: ")
     #Laço para validar entrada de números
@@ -68,6 +70,7 @@ def menuRegistrarDevolucao():
     registrarDevolucao(isbn, usuarioId)
 
 def menuConsultarEmprestimos():
+    os.system('cls')
     print("--- CONSULTAR EMPRÉSTIMOS ---")
     consultarEmprestimos()
     

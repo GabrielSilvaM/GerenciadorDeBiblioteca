@@ -75,7 +75,7 @@ def menuConsultarUsuarios():
     while True:
         try:
             opcao = int(input())
-            if opcao >= 1 and opcao <= 4:
+            if opcao >= 1 and opcao <= 3:
                 break
         except ValueError:
             print("Opção inválida")
